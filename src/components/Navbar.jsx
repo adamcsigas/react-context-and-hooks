@@ -1,5 +1,5 @@
 import React, {/* Component, */ useContext } from 'react';
-import { themeContext } from '../contexts/ThemeContext';
+import { ThemeContext } from '../contexts/ThemeContext';
 import { AuthContext } from '../contexts/AuthContext';
 
 /* class NavBar extends Component {
@@ -32,7 +32,7 @@ import { AuthContext } from '../contexts/AuthContext';
 } */
 
 const NavBar = () => {
-    const { isLightTheme, light, dark } = useContext(themeContext);
+    const { isLightTheme, light, dark } = useContext(ThemeContext);
     const { isAuthenticated, toggleAuth } = useContext(AuthContext);
     const theme = isLightTheme ? light : dark;
     return (
